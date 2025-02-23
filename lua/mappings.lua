@@ -69,9 +69,9 @@ keymap("n", ";", ":")
 keymap({"n", "v"}, "j", "gj", { desc = "Move down one line, even with wrapped lines" })
 keymap({"n", "v"}, "k", "gk", { desc = "Move up one line, even with wrapped lines" })
 
--- -- NeoTree
--- keymap("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
--- keymap("n", "<leader>tf", "<CMD>Neotree focus<CR>", { desc = "Tree Focus" })
+-- NeoTree
+keymap("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
+keymap("n", "<leader>tf", "<CMD>Neotree focus<CR>", { desc = "Tree Focus" })
 
 -- -- Tabs
 -- keymap("n", "<leader><tab><tab>", "<CMD>tabnew<CR>", { desc = "New tab" })

@@ -50,6 +50,7 @@ vim.opt.undofile = true
 
 -- incremental search highlights matches as you type
 vim.opt.incsearch = true
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- autosave
 vim.api.nvim_create_autocmd(
