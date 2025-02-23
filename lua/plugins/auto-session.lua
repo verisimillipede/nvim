@@ -53,7 +53,7 @@ return {
       post_restore_cmds = { open_neo_tree },
       pre_save_cmds = { close_neo_tree, close_aerial},
       suppressed_dirs = { "~/", "~/Downloads", "/" },
-      use_git_branch = true,
+      -- use_git_branch = true,
       cwd_change_handling = true,
       -- bypass_session_save_file_types = { "neo-tree" },
     })
