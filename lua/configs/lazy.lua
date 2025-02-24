@@ -14,8 +14,6 @@ return {
   performance = {
     rtp = {
       disabled_plugins = {
-        "2html_plugin",
-        "tohtml",
         "getscript",
         "getscriptPlugin",
         "gzip",
@@ -24,7 +22,6 @@ return {
         "netrwPlugin",
         "netrwSettings",
         "netrwFileHandlers",
-        "matchit",
         "tar",
         "tarPlugin",
         "rrhelper",
@@ -33,9 +30,7 @@ return {
         "vimballPlugin",
         "zip",
         "zipPlugin",
-        "tutor",
         "rplugin",
-        "syntax",
         "synmenu",
         "optwin",
         "compiler",

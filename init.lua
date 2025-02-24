@@ -41,6 +41,7 @@ vim.opt.smartindent = true
 vim.opt.linebreak = true
 
 
+vim.g.autoformat = true
 
 -- turn off swap files and setup undodir
 vim.opt.swapfile = false
