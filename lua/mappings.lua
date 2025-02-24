@@ -87,18 +87,13 @@ keymap("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>", { desc = "Navigate to the rig
 keymap("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", { desc = "Navigate to the previous tmux pane" })
 
 -- Undotree
-keymap("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Toggle undotree" })
+-- keymap("n", "<leader>u", "<CMD>UndotreeToggle<CR>", { desc = "Toggle undotree" })
 
 -- New Windows
 keymap("n", "<leader>ow", "<CMD>vsplit<CR>", { desc = "Open a new window vertically" })
 keymap("n", "<leader>sp", "<CMD>split<CR>", { desc = "Open a new window horizontally" })
 
 
--- Window Navigation
--- keymap("n", "<A-h>", "<C-w>h", { desc = "Navigate to the left window" }) -- hint: use thumb to press alt
--- keymap("n", "<A-l>", "<C-w>l", { desc = "Navigate to the right window" }) -- hint: use thumb to press alt
--- keymap("n", "<A-k>", "<C-w>k", { desc = "Navigate to the window above" }) -- hint: use thumb to press alt
--- keymap("n", "<A-j>", "<C-w>j", { desc = "Navigate to the window below" }) -- hint: use thumb to press alt
 keymap("n", "<A-s>", "<C-w>r", { desc = "Swap windows left to right" })
 
 -- Resize Windows
@@ -110,9 +105,6 @@ keymap("n", "<C-Down>", "<C-w>-", { desc = "Resize window down" })
 -- Indent Blocks
 keymap('v', '<', '<gv')
 keymap('v', '>', '>gv')
-
--- -- Jump back to file directory
--- keymap("n", "-", "<CMD>Ex<CR>", { desc = "Jump back to file directory" })
 
 -- Helix inspired remaps, go home and go long
 keymap("n", "gh", "^", { desc = "[G]oto first char in line (h is chosen because its also a left movement" }) -- props to whoever came up with these
@@ -151,27 +143,6 @@ keymap("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file"
 -- Replace the word under cursor thoughout the file
 keymap("n", "<leader>cw", [[:%s/<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Replace word under cursor" })
 
--- -- Insert a blank line below or above current line
--- keymap("n", "<leader>o", "printf('m`%so<ESC>``', v:count1)", {
---   expr = true,
---   desc = "insert line below",
--- })
---
--- keymap("n", "<leader>O", "printf('m`%sO<ESC>``', v:count1)", {
---   expr = true,
---   desc = "insert line above",
--- })
---
--- -- Open blank line below or above comment
--- keymap("n", "<leader>bo", "o<ESC>0D", { desc = "Open blank line below comment" })
--- keymap("n", "<leader>bO", "O<ESC>0D", { desc = "Open blank line above comment" })
-
-
--- TODO: learn how to use marks/tags?
--- keymap("n", "<C-k>", "<cmd>cnext<CR>zz")
--- keymap("n", "<C-j>", "<cmd>cprev<CR>zz")
--- keymap("n", "<leader>k", "<cmd>lnext<CR>zz")
--- keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- https://github.com/oyinbra/nvim-config
 -- Config inspo: slydragonn/maps.lua
