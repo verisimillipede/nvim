@@ -17,5 +17,12 @@
 
 
 return {
-    'mbbill/undotree',
+  {
+    "mbbill/undotree",
+    lazy = false,
+    config = function()
+      -- You can set custom keybindings or configurations here
+      vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>", { noremap = true, silent = true })
+    end,
+  },
 }
