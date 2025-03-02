@@ -63,7 +63,7 @@ keymap("n", "<leader>q", "<CMD>qa<CR><CR>", { desc = "Quit" })
 -- Exit insert mode
 keymap("i", "jk", "<ESC>")
 
-keymap("n", ";", ":")
+-- keymap("n", ";", ":")
 
 -- Navigate one line at a time, even with wrapped lines
 keymap({"n", "v"}, "j", "gj", { desc = "Move down one line, even with wrapped lines" })
