@@ -19,7 +19,7 @@ return {
       model = "claude-3-5-sonnet-20241022",
       temperature = 0,
       max_tokens = 4096,
-      -- api_key_name = "CLAUDE_API"
+      api_key_name = "CLAUDE_API"
     },
 
 
@@ -29,13 +29,13 @@ return {
       timeout = 30000, -- timeout in milliseconds
       temperature = 0, -- adjust if needed
       max_tokens = 4096,
+      api_key_name = "OPENAI_API"
       -- reasoning_effort = "high" -- only supported for reasoning models (o1, etc.)
       -- api_key_name = "OPENAI_API"
     },
 
     suggestion = {
-        debounce = 60,
-        throttle = 600,
+        debounce = 0,
     },
 
     -- dual_boost = {
