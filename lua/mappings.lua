@@ -46,6 +46,10 @@ keymap("n", "nnp", "<CMD>NoNeckPain<CR>", { desc = "Activate NoNeckPain" })
 -- keymap("n", "<leader>to", "o- [ ] ", { desc = "Open new TODO: item below current line" })
 -- keymap("n", "<leader>tO", "O- [ ] ", { desc = "Open new TODO: item below current line" })
 
+-- Bold selected textxi****<ESC>hhp
+keymap("v", "<C-b>", "xi****<ESC>hhp", { desc = "Mark Done" })
+
+keymap("n", "<C-b>", "bvexi****<ESC>hhp", { desc = "Mark Done" })
 
 -- ToggleTerm
 keymap("n", "<leader>tt", "<CMD>ToggleTerm<CR>", { desc = "Open ToggleTerm" })
