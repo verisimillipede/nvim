@@ -58,3 +58,9 @@ vim.api.nvim_create_autocmd(
     { "FocusLost", "ModeChanged", "TextChanged", "BufEnter" },
     { desc = "autosave", pattern = "*", command = "silent! update" }
 )
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.nix", "*.py", "*.html", "*.css", "*.js", "*.ts", "*.json", "*.yaml", "*.md" },
+  callback = function()
+    require("conform").format()
+  end,
+})

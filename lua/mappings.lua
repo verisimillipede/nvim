@@ -65,7 +65,7 @@ keymap("n", "<leader>ww", "<CMD>update<CR>", { desc = "Save" })
 keymap("n", "<leader>q", "<CMD>qa<CR><CR>", { desc = "Quit" })
 
 -- Exit insert mode
-keymap("i", "jk", "<ESC>")
+-- keymap("i", "jk", "<ESC>")
 
 -- keymap("n", ";", ":")
 
