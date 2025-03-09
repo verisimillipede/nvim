@@ -14,6 +14,8 @@
 
 return {
   "bullets-vim/bullets.vim",
+  enabled = true,
+  lazy = false,
   config = function()
     -- Disable deleting the last empty bullet when pressing <cr> or 'o'
     -- default = 1

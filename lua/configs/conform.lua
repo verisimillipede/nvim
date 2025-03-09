@@ -3,7 +3,8 @@ require('conform').setup({
     python = { 'black' },
     html = { 'prettier' },
     css = { 'prettier' },
-    nix = { 'alejandra' }
+    nix = { 'alejandra' };
+    htmldjango = { 'djlint' }
     -- other filetypes
   },
 })
