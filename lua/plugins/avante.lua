@@ -34,10 +34,6 @@ return {
       -- api_key_name = "OPENAI_API"
     },
 
-    suggestion = {
-        debounce = 0,
-    },
-
     -- dual_boost = {
     --   enabled = ,
     --   first_provider = "openai",
@@ -46,7 +42,7 @@ return {
     --   timeout = 60000, -- Timeout in milliseconds
     -- },
     behaviour = {
-      auto_suggestions = true, -- Experimental stage
+      auto_suggestions = false, -- Experimental stage
 
     --   auto_set_highlight_group = true,
     --   auto_set_keymaps = true,

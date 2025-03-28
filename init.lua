@@ -53,6 +53,7 @@ vim.opt.undofile = true
 vim.opt.incsearch = true
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
+vim.opt.relativenumber = true
 -- autosave
 vim.api.nvim_create_autocmd(
     { "FocusLost", "ModeChanged", "TextChanged", "BufEnter" },
