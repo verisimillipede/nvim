@@ -4,7 +4,8 @@ require('conform').setup({
     html = { 'prettier' },
     css = { 'prettier' },
     nix = { 'alejandra' };
-    htmldjango = { 'djlint' }
+    htmldjango = { 'djlint' };
+    markdown = { 'prettier' };
     -- other filetypes
   },
 })
