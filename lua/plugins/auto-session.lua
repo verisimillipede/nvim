@@ -16,7 +16,7 @@
 
 return {
   "rmagatti/auto-session",
-  enabled = false,
+  enabled = true,
   lazy = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
