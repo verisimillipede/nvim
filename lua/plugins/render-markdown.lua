@@ -136,7 +136,7 @@ return {
                 -- Highlight for the heading icon and extends through the entire line
                 backgrounds = {
                     'RenderMarkdownH1Bg',
-                    'RenderMarkdownH2Bg',
+                    'RenderMarkdownH3Bg',
                     'RenderMarkdownH3Bg',
                     'RenderMarkdownH4Bg',
                     'RenderMarkdownH5Bg',
