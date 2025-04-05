@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd(
     { desc = "autosave", pattern = "*", command = "silent! update" }
 )
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.nix", "*.py", "*.html", "*.css", "*.js", "*.ts", "*.json", "*.yaml", "*.md" },
+  pattern = { "*.nix", "*.py", "*.html", "*.css", "*.js", "*.ts", "*.json", "*.yaml", "*.md", "*.lua" },
   callback = function()
     require("conform").format()
   end,
