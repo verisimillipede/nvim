@@ -7,16 +7,15 @@
 --          │   navigating and managing project files efficiently.    │
 --          └─────────────────────────────────────────────────────────┘
 
-
 -- ══ TODO: ═══════════════════════════════════════════════════════════
 --
 -- - [ ] Add keymap to refocus on current buffer
 -- - [ ] Add file preview on hover
 -- - [ ] provide image preview support
 
-
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  enabled = false,
   cmd = "Neotree",
   branch = "v3.x",
   lazy = false,
@@ -130,8 +129,8 @@ return {
 
     buffers = { -- now properly indented
       follow_current_file = {
-          enable = true,
-      },-- This will find and focus the file in the active buffer every time
+        enable = true,
+      }, -- This will find and focus the file in the active buffer every time
       group_empty_dirs = true, -- when true, empty folders will be grouped together
       show_unloaded = true,
     },
