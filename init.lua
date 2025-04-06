@@ -40,8 +40,10 @@ vim.opt.smartindent = true
 
 vim.opt.linebreak = true
 
-
 vim.g.autoformat = true
+
+-- add an 8 char buffer to the bottom of the viewport except for eof when scrolling
+vim.opt.scrolloff = 8
 
 -- turn off swap files and setup undodir
 vim.opt.swapfile = false
@@ -51,13 +53,13 @@ vim.opt.undofile = true
 
 -- incremental search highlights matches as you type
 vim.opt.incsearch = true
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.opt.relativenumber = true
 -- autosave
 vim.api.nvim_create_autocmd(
-    { "FocusLost", "ModeChanged", "TextChanged", "BufEnter" },
-    { desc = "autosave", pattern = "*", command = "silent! update" }
+  { "FocusLost", "ModeChanged", "TextChanged", "BufEnter" },
+  { desc = "autosave", pattern = "*", command = "silent! update" }
 )
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.nix", "*.py", "*.html", "*.css", "*.js", "*.ts", "*.json", "*.yaml", "*.md", "*.lua" },
