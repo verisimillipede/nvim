@@ -8,24 +8,21 @@
 --          │             enhancing workflow efficiency.              │
 --          └─────────────────────────────────────────────────────────┘
 
-
 -- ══ TODO: ═══════════════════════════════════════════════════════════
 --
 -- - [x] Add shortcuts to common directories, such as nvim, dotfiles, Zealot, etc. Not necessary with auto-session and command line
 -- - [x] Create a keymap to open new BLANK line below a comment
 -- - [x] Create keymap for deleting all contents of a file
 -- - [x] Reformat lunarvim keymaps
--- - [x] Create TODO: script
+-- - [x] Create TODO script
 -- - [x] Create new TODO item keymap
 -- - [x] Add keymap to swap windows left to right
 -- - [x] Add keymap to open line a new line at the end of the file
--- - [ ] Create keymap to "check" a TODO item
+-- - [x] Create keymap to "check" a TODO item
 -- - [ ] Update ^^^^^^ to restore cursor to original position
 -- - [ ] Can I make it possible to undo entire TODO item with one undo?
 
 require "nvchad.mappings"
-
-
 
 vim.g.mapleader = " " -- Set space as the leader key
 
@@ -37,16 +34,20 @@ keymap("n", "<leader>A", "Go", { desc = "Open new line at end of file" })
 -- Source keymaps.lua
 keymap("n", "<leader>R", ":source /home/mike/.config/nvchad/lua/mappings.lua", { desc = "Source keymaps.lua" })
 
+-- Smooth scrolling
+-- keymap("n", "<C-d>", "<C-d>zz")
+-- keymap("n", "<C-u>", "<C-u>zz")
+
 keymap("n", "nnp", "<CMD>NoNeckPain<CR>", { desc = "Activate NoNeckPain" })
 
 -- -- Command to add TODO comment with comment-box.nvim
 -- keymap("n", "<leader>td", "o<CR><CR><CR><ESC>kkiTODO:<ESC><CMD>CBllline13<CR>o<CR> - [ ] ", { desc = "Add a TODO comment" })
 -- keymap("n", "<leader>md", "0f[lrx", { desc = "Mark Done" })
 -- keymap("n", "<leader>rm", "0f[lr ", { desc = "Remove checkMark" })
--- keymap("n", "<leader>to", "o- [ ] ", { desc = "Open new TODO: item below current line" })
--- keymap("n", "<leader>tO", "O- [ ] ", { desc = "Open new TODO: item below current line" })
+-- keymap("n", "<leader>to", "o- [ ] ", { desc = "Open new TODO item below current line" })
+-- keymap("n", "<leader>tO", "O- [ ] ", { desc = "Open new TODO item below current line" })
 
--- Bold selected textxi****<ESC>hhp
+-- Bold selected text
 keymap("v", "<C-b>", "xi****<ESC>hhp", { desc = "Mark Done" })
 
 keymap("n", "<C-b>", "bvexi****<ESC>hhp", { desc = "Mark Done" })
@@ -70,8 +71,8 @@ keymap("n", "<leader>q", "<CMD>qa<CR><CR>", { desc = "Quit" })
 -- keymap("n", ";", ":")
 
 -- Navigate one line at a time, even with wrapped lines
-keymap({"n", "v"}, "j", "gj", { desc = "Move down one line, even with wrapped lines" })
-keymap({"n", "v"}, "k", "gk", { desc = "Move up one line, even with wrapped lines" })
+keymap({ "n", "v" }, "j", "gj", { desc = "Move down one line, even with wrapped lines" })
+keymap({ "n", "v" }, "k", "gk", { desc = "Move up one line, even with wrapped lines" })
 
 -- NeoTree
 keymap("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
@@ -82,7 +83,6 @@ keymap("n", "<leader>tf", "<CMD>Neotree focus<CR>", { desc = "Tree Focus" })
 -- keymap("n", "<tab>", "gt", { desc = "Next tab" })
 -- keymap("n", "<S-tab>", "gT", { desc = "Previous tab" })
 -- keymap("n", "<leader>tc", "<CMD>tabclose<CR>", { desc = "Close tab" })
-
 
 keymap("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { desc = "Navigate to the left tmux pane" })
 keymap("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>", { desc = "Navigate to the bottom tmux pane" })
@@ -97,7 +97,6 @@ keymap("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", { desc = "Navigate to the
 keymap("n", "<leader>ow", "<CMD>vsplit<CR>", { desc = "Open a new window vertically" })
 keymap("n", "<leader>sp", "<CMD>split<CR>", { desc = "Open a new window horizontally" })
 
-
 keymap("n", "<A-s>", "<C-w>r", { desc = "Swap windows left to right" })
 
 -- Resize Windows
@@ -107,8 +106,8 @@ keymap("n", "<C-Up>", "<C-w>+", { desc = "Resize window up" })
 keymap("n", "<C-Down>", "<C-w>-", { desc = "Resize window down" })
 
 -- Indent Blocks
-keymap('v', '<', '<gv')
-keymap('v', '>', '>gv')
+keymap("v", "<", "<gv")
+keymap("v", ">", ">gv")
 
 -- Helix inspired remaps, go home and go long
 keymap("n", "gh", "^", { desc = "[G]oto first char in line (h is chosen because its also a left movement" }) -- props to whoever came up with these
@@ -139,14 +138,13 @@ keymap("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" }) --as
 -- keymap("n", "<leader>dd", ":%d<CR>", { desc = "Delete entire contents of current buffer" })
 
 -- LSP
-keymap("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file" });
+keymap("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file" })
 
 -- -- Make current file executable
 -- keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Add executable permissions to the current buffer" })
 
 -- Replace the word under cursor thoughout the file
 keymap("n", "<leader>cw", [[:%s/<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Replace word under cursor" })
-
 
 -- https://github.com/oyinbra/nvim-config
 -- Config inspo: slydragonn/maps.lua
