@@ -7,7 +7,6 @@ return {
     -- add any opts here
     -- for example
 
-
     provider = "claude", -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
     -- WARNING: Since auto-suggestions are a high-frequency operation and therefore expensive,
     -- currently designating it as `copilot` provider is dangerous because: https://github.com/yetone/avante.nvim/issues/1048
@@ -19,9 +18,8 @@ return {
       model = "claude-3-5-sonnet-20241022",
       temperature = 0,
       max_tokens = 4096,
-      api_key_name = "CLAUDE_API"
+      api_key_name = "CLAUDE_API",
     },
-
 
     openai = {
       endpoint = "https://api.openai.com/v1",
@@ -29,7 +27,7 @@ return {
       timeout = 30000, -- timeout in milliseconds
       temperature = 0, -- adjust if needed
       max_tokens = 4096,
-      api_key_name = "OPENAI_API"
+      api_key_name = "OPENAI_API",
       -- reasoning_effort = "high" -- only supported for reasoning models (o1, etc.)
       -- api_key_name = "OPENAI_API"
     },
@@ -44,16 +42,14 @@ return {
     behaviour = {
       auto_suggestions = false, -- Experimental stage
 
-    --   auto_set_highlight_group = true,
-    --   auto_set_keymaps = true,
-    --   auto_apply_diff_after_generation = false,
-    --   support_paste_from_clipboard = false,
-    --   minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
-    --   enable_token_counting = true, -- Whether to enable token counting. Default to true.
-    --   enable_cursor_planning_mode = false, -- Whether to enable Cursor Planning Mode. Default to false.
+      --   auto_set_highlight_group = true,
+      --   auto_set_keymaps = true,
+      --   auto_apply_diff_after_generation = false,
+      --   support_paste_from_clipboard = false,
+      --   minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
+      --   enable_token_counting = true, -- Whether to enable token counting. Default to true.
+      --   enable_cursor_planning_mode = false, -- Whether to enable Cursor Planning Mode. Default to false.
     },
-
-
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
@@ -89,7 +85,7 @@ return {
     },
     {
       -- Make sure to set this up properly if you have lazy=true
-      'MeanderingProgrammer/render-markdown.nvim',
+      "MeanderingProgrammer/render-markdown.nvim",
       opts = {
         file_types = { "markdown", "Avante" },
       },
