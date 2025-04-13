@@ -3,20 +3,8 @@ return {
   lazy = false,
   version = "*",
   config = function()
-    require("no-neck-pain").setup({
-      buffers = {
-        scratchPad = {
-          -- set to `false` to
-          -- disable auto-saving
-          enabled = true,
-          -- set to `nil` to default 
-          -- to current working directory
-          location = 'nil',
-        },
-        bo = {
-          filetype = "md"
-        },
-      },
-    })
+    require("no-neck-pain").setup {
+      version = "*",
+    }
   end,
 }
