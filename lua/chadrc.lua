@@ -9,8 +9,9 @@ M.base46 = {
   theme = "everforest",
 
   hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
+    CursorLine = { bg = "#3a4448" }, -- Light red background for cursor line
+    -- Comment = { italic = true },
+    -- ["@comment"] = { italic = true },
   },
 }
 

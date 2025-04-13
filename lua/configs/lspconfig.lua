@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE -- need "basedpyright" "markdown-oxide"
-local servers = { "pyright", "nixd", "fish_lsp", "html", "cssls" }
+local servers = { "pyright", "nil_ls", "fish_lsp", "html", "cssls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
