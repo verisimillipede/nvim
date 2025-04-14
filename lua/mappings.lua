@@ -38,14 +38,25 @@ keymap("n", "<leader>R", ":source /home/mike/.config/nvchad/lua/mappings.lua", {
 -- keymap("n", "<C-d>", "<C-d>zz")
 -- keymap("n", "<C-u>", "<C-u>zz")
 
+-- Toggle NoNeckPain
 keymap("n", "nnp", "<CMD>NoNeckPain<CR>", { desc = "Activate NoNeckPain" })
 
--- -- Command to add TODO comment with comment-box.nvim
--- keymap("n", "<leader>td", "o<CR><CR><CR><ESC>kkiTODO:<ESC><CMD>CBllline13<CR>o<CR> - [ ] ", { desc = "Add a TODO comment" })
--- keymap("n", "<leader>md", "0f[lrx", { desc = "Mark Done" })
--- keymap("n", "<leader>rm", "0f[lr ", { desc = "Remove checkMark" })
--- keymap("n", "<leader>to", "o- [ ] ", { desc = "Open new TODO item below current line" })
--- keymap("n", "<leader>tO", "O- [ ] ", { desc = "Open new TODO item below current line" })
+-- Kill current buffer
+keymap("n", "<leader>kb", "<cmd>bd<CR>", { desc = "Kill current buffer" })
+
+-- Kill all buffers except current
+keymap("n", "<leader>ka", "<cmd>%bd|e#|bd#<CR>", { desc = "Kill all buffers except current" })
+
+-- See `:help telescope.builtin`
+keymap("n", "<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" }) -- github:aokon
+keymap("n", "<leader><space>", require("telescope.builtin").buffers, { desc = "[ ] Find existing buffers" }) -- github:aokon
+keymap("n", "<leader>/", function()
+  -- You can pass additional configuration to telescope to change theme, layout, etc.
+  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end, { desc = "[/] Fuzzily search in current buffer]" }) -- github:aokon
 
 -- Bold selected text
 keymap("v", "<C-b>", "xi****<ESC>hhp", { desc = "Mark Done" })
