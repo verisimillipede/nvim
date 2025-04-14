@@ -9,10 +9,10 @@ M.base46 = {
   theme = "everforest",
 
   hl_override = {
-    CursorLine = { bg = "#3a4448" }, -- Light red background for cursor line
+    CursorLine = { bg = "#3a4448" },
     Comment = { italic = true },
     ["@comment"] = { italic = true },
-    Visual = { bg = "#61696C" }, -- Light orange background for visual selection
+    Visual = { bg = "#61696C" },
   },
 }
 
