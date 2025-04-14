@@ -4,9 +4,12 @@ return {
   lazy = true,
   event = "VeryLazy",
   ft = "markdown",
+  keys = {
+    { "<leader>od", "<cmd>ObsidianToday<cr>", desc = "Open Daily Journal" },
+  },
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",  -- Add this if you're using nvim-cmp for completion
+    "hrsh7th/nvim-cmp", -- Add this if you're using nvim-cmp for completion
   },
   config = function()
     require("obsidian").setup {
@@ -23,7 +26,7 @@ return {
       notes_subdir = "Inbox",
       -- set daily notes to be created in journal directory
       -- daily_notes = {
-          --   directory = "~/Documents/Zettlekasten/journal/",
+      --   directory = "~/Documents/Zettlekasten/journal/",
       -- },
       daily_notes = {
         -- Optional, if you keep daily notes in a separate directory.
@@ -47,11 +50,11 @@ return {
       ---@param spec { id: string, dir: obsidian.Path, title: string|? }
       ---@return string|obsidian.Path The full path to the new note.
       note_path_func = function(spec)
-          local title = spec.title or spec.id
-          -- Use the title directly for the file name
-          local file_name = title  -- Keep spaces and all characters
-          local path = spec.dir / file_name
-          return path:with_suffix(".md")
+        local title = spec.title or spec.id
+        -- Use the title directly for the file name
+        local file_name = title -- Keep spaces and all characters
+        local path = spec.dir / file_name
+        return path:with_suffix ".md"
       end,
     }
   end,
