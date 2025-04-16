@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "everforest",
+  theme = "scaryforest",
 
   hl_override = {
     CursorLine = { bg = "#3a4448" },
