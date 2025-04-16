@@ -2,8 +2,11 @@ require "nvchad.options"
 
 -- add yours here!
 
-local o = vim.o
-o.cursorlineopt = "both" -- to enable cursorline!
+-- Disable automatic system clipboard usage
+vim.opt.clipboard = ""
+
+-- Enable cursorline
+vim.opt.cursorlineopt = "both"
 
 local autocmd = vim.api.nvim_create_autocmd
 
