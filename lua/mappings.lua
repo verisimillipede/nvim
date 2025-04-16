@@ -159,3 +159,7 @@ keymap("n", "<leader>cw", [[:%s/<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Re
 
 -- https://github.com/oyinbra/nvim-config
 -- Config inspo: slydragonn/maps.lua
+keymap({ "n", "t" }, "<A-m>", function()
+  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
+end, { desc = "terminal toggleable horizontal term" })
+
