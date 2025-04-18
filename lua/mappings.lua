@@ -50,18 +50,22 @@ keymap("n", "<leader>ka", "<cmd>%bd|e#|bd#<CR>", { desc = "Kill all buffers exce
 -- See `:help telescope.builtin`
 keymap("n", "<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" }) -- github:aokon
 keymap("n", "<leader><space>", require("telescope.builtin").buffers, { desc = "[ ] Find existing buffers" }) -- github:aokon
-keymap("n", "<leader>/", function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end, { desc = "[/] Fuzzily search in current buffer]" }) -- github:aokon
+-- keymap("n", "<leader>/", function()
+--   -- You can pass additional configuration to telescope to change theme, layout, etc.
+--   require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
+--     winblend = 10,
+--     previewer = false,
+--   })
+-- end, { desc = "[/] Fuzzily search in current buffer]" }) -- github:aokon
 
--- Bold selected text
-keymap("v", "<C-b>", "xi****<ESC>hhp", { desc = "Mark Done" })
+-- Bold text
+keymap("v", "<C-b>", "xi****<ESC>hhp", { desc = "Bold Selected Text" })
+keymap("n", "<leader>B", "$v0xi****<ESC>hhp", { desc = "Bold Entire Line" })
+keymap("n", "<C-b>", "bvexi****<ESC>hhp", { desc = "Bold Word Under Cursor" })
 
-keymap("n", "<C-b>", "bvexi****<ESC>hhp", { desc = "Mark Done" })
+-- Surround text with quotes and double quotes.
+keymap("v", "<leader>wd", 'xi""<ESC>hp', { desc = "Wrap Selected Text with Double Quotes" })
+keymap("v", "<leader>ws", "xi''<ESC>hp", { desc = "Wrap Selected Text with Single Quotes" })
 
 -- ToggleTerm
 keymap("n", "<leader>tt", "<CMD>ToggleTerm<CR>", { desc = "Open ToggleTerm" })
@@ -162,4 +166,3 @@ keymap("n", "<leader>cw", [[:%s/<C-r><C-w>//gc<Left><Left><Left>]], { desc = "Re
 keymap({ "n", "t" }, "<A-m>", function()
   require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
 end, { desc = "terminal toggleable horizontal term" })
-
