@@ -6,14 +6,14 @@
 local M = {}
 
 M.base46 = {
-  theme = "scaryforest",
+  theme = "everblush",
 
-  hl_override = {
-    CursorLine = { bg = "#3a4448" },
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
-    Visual = { bg = "#61696C" },
-  },
+  -- hl_override = {
+    -- CursorLine = { bg = "#3a4448" },
+    -- Comment = { italic = true },
+    -- ["@comment"] = { italic = true },
+    -- Visual = { bg = "#61696C" },
+  -- },
 }
 
 -- M.nvdash = { load_on_startup = true }
