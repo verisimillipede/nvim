@@ -135,12 +135,12 @@ return {
         -- The 'level' is used to index into the list using a clamp
         -- Highlight for the heading icon and extends through the entire line
         backgrounds = {
-          "RenderMarkdownH1Bg",
-          "RenderMarkdownH3Bg",
-          "RenderMarkdownH3Bg",
-          "RenderMarkdownH4Bg",
-          "RenderMarkdownH5Bg",
-          "RenderMarkdownH6Bg",
+          -- "RenderMarkdownH1Bg",
+          -- "RenderMarkdownH3Bg",
+          -- "RenderMarkdownH3Bg",
+          -- "RenderMarkdownH4Bg",
+          -- "RenderMarkdownH5Bg",
+          -- "RenderMarkdownH6Bg",
         },
         -- The 'level' is used to index into the list using a clamp
         -- Highlight for the heading and sign icons
@@ -158,7 +158,7 @@ return {
         enabled = true,
         -- Amount of margin to add to the left of paragraphs
         -- If a floating point value < 1 is provided it is treated as a percentage of the available window space
-        left_margin = 0,
+        left_margin = 1,
         -- Minimum width to use for paragraphs
         min_width = 0,
       },
