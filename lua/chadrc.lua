@@ -10,8 +10,8 @@ M.base46 = {
 
   hl_override = {
     CursorLine = { bg = "#3a4448" },
-    -- Comment = { italic = true },
-    -- ["@comment"] = { italic = true },
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
     -- Visual = { bg = "#61696C" },
   },
 }

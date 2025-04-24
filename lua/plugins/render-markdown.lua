@@ -283,6 +283,7 @@ return {
         --   'scope_highlight': Highlight for item associated with custom checkbox
         custom = {
           todo = { raw = "[-]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo", scope_highlight = nil },
+          nah = { raw = "[~]", rendered = "󱋭 ", highlight = "RenderMarkdownChecked", scope_highlight = nil },
         },
       },
       quote = {
@@ -295,7 +296,7 @@ return {
         -- combination of these that is likely to work is showbreak = '  ' (2 spaces), breakindent = true,
         -- breakindentopt = '' (empty string). These values are not validated by this plugin. If you want
         -- to avoid adding these to your main configuration then set them in win_options for this plugin.
-        repeat_linebreak = false,
+        repeat_linebreak = false, -- TODO: This would be nice.
         -- Highlight for the quote icon
         highlight = "RenderMarkdownQuote",
       },
